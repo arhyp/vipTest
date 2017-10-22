@@ -25,7 +25,17 @@ class ListGIPHYsPresenter: ListGIPHYsPresentationLogic
   
   func presentSomething(response: ListGIPHYs.FetchList.Response)
   {
-    let viewModel = ListGIPHYs.FetchList.ViewModel()
+    var viewModel = ListGIPHYs.FetchList.ViewModel()
+    viewModel.displayesGiphies = self.convertGIPHY(giphies: response.giphies ?? [GIPHY]())
     viewController?.displaySomething(viewModel: viewModel)
   }
+
+    func convertGIPHY(giphies: [GIPHY])->[ListGIPHYs.FetchList.ViewModel.DisplayedGIPHY]{
+        var arrayOfGiphies = [ListGIPHYs.FetchList.ViewModel.DisplayedGIPHY]()
+        for giphy in giphies{
+            var disGIPHY = ListGIPHYs.FetchList.ViewModel.DisplayedGIPHY(url: giphy.url, title: giphy.title)
+            arrayOfGiphies.append(disGIPHY)
+        }
+        return arrayOfGiphies
+    }
 }

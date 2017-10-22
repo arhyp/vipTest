@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		39B25262A8570620015FBF0A /* Pods_VIPTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C139638AD5138E7FC997F44B /* Pods_VIPTest.framework */; };
+		CA5F0E0C1F9D188F00B3A736 /* GIPHYAPIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F0E0B1F9D188F00B3A736 /* GIPHYAPIWorker.swift */; };
+		CA5F0E0E1F9D44EC00B3A736 /* GIPHYCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5F0E0D1F9D44EC00B3A736 /* GIPHYCollectionViewCell.swift */; };
+		CA5FF09F1F9CDCB600013D24 /* GIPHYWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FF09E1F9CDCB600013D24 /* GIPHYWorker.swift */; };
+		CA5FF0A51F9CF6F600013D24 /* GIPHY.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FF0A41F9CF6F600013D24 /* GIPHY.swift */; };
+		CA5FF0A71F9CF70900013D24 /* ManagedGIPHY.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FF0A61F9CF70900013D24 /* ManagedGIPHY.swift */; };
+		CA5FF0AB1F9CFE7600013D24 /* GiphiesMemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FF0AA1F9CFE7600013D24 /* GiphiesMemStore.swift */; };
+		CA5FF0AD1F9D06FF00013D24 /* GiphiesCoreDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FF0AC1F9D06FF00013D24 /* GiphiesCoreDataStore.swift */; };
+		CA5FF0AF1F9D0A4700013D24 /* ManagedGIPHY+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA5FF0AE1F9D0A4700013D24 /* ManagedGIPHY+CoreDataProperties.swift */; };
 		CA662B971F9BED740047BA2B /* ShowGIPHYInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662B961F9BED740047BA2B /* ShowGIPHYInteractor.swift */; };
 		CA662B991F9BEDB10047BA2B /* ShowGIPHYModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662B981F9BEDB10047BA2B /* ShowGIPHYModels.swift */; };
 		CA662B9B1F9BEDC40047BA2B /* ShowGIPHYPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662B9A1F9BEDC40047BA2B /* ShowGIPHYPresenter.swift */; };
@@ -28,6 +37,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5BAA1EB021BDBC99D1EF7691 /* Pods-VIPTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-VIPTest/Pods-VIPTest.release.xcconfig"; sourceTree = "<group>"; };
+		C139638AD5138E7FC997F44B /* Pods_VIPTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VIPTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA5F0E0B1F9D188F00B3A736 /* GIPHYAPIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIPHYAPIWorker.swift; sourceTree = "<group>"; };
+		CA5F0E0D1F9D44EC00B3A736 /* GIPHYCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIPHYCollectionViewCell.swift; sourceTree = "<group>"; };
+		CA5FF09E1F9CDCB600013D24 /* GIPHYWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIPHYWorker.swift; sourceTree = "<group>"; };
+		CA5FF0A41F9CF6F600013D24 /* GIPHY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIPHY.swift; sourceTree = "<group>"; };
+		CA5FF0A61F9CF70900013D24 /* ManagedGIPHY.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManagedGIPHY.swift; sourceTree = "<group>"; };
+		CA5FF0AA1F9CFE7600013D24 /* GiphiesMemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphiesMemStore.swift; sourceTree = "<group>"; };
+		CA5FF0AC1F9D06FF00013D24 /* GiphiesCoreDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiphiesCoreDataStore.swift; sourceTree = "<group>"; };
+		CA5FF0AE1F9D0A4700013D24 /* ManagedGIPHY+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedGIPHY+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		CA662B961F9BED740047BA2B /* ShowGIPHYInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGIPHYInteractor.swift; sourceTree = "<group>"; };
 		CA662B981F9BEDB10047BA2B /* ShowGIPHYModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGIPHYModels.swift; sourceTree = "<group>"; };
 		CA662B9A1F9BEDC40047BA2B /* ShowGIPHYPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGIPHYPresenter.swift; sourceTree = "<group>"; };
@@ -48,6 +67,7 @@
 		CA6C6B8C1F9BC23C0025933B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA6C6B8F1F9BC23C0025933B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CA6C6B911F9BC23C0025933B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EABD5876B8DDE137F70E688D /* Pods-VIPTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VIPTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VIPTest/Pods-VIPTest.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,15 +75,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39B25262A8570620015FBF0A /* Pods_VIPTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A655B45531248B9C6D9652CA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C139638AD5138E7FC997F44B /* Pods_VIPTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CA662B8F1F9BEC660047BA2B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				CA5FF0AE1F9D0A4700013D24 /* ManagedGIPHY+CoreDataProperties.swift */,
+				CA5FF0A61F9CF70900013D24 /* ManagedGIPHY.swift */,
+				CA5FF0A41F9CF6F600013D24 /* GIPHY.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -71,6 +103,8 @@
 		CA662B901F9BEC750047BA2B /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CA5FF0AA1F9CFE7600013D24 /* GiphiesMemStore.swift */,
+				CA5FF0AC1F9D06FF00013D24 /* GiphiesCoreDataStore.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -78,6 +112,8 @@
 		CA662B911F9BEC810047BA2B /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				CA5FF09E1F9CDCB600013D24 /* GIPHYWorker.swift */,
+				CA5F0E0B1F9D188F00B3A736 /* GIPHYAPIWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -122,6 +158,8 @@
 			children = (
 				CA6C6B811F9BC23B0025933B /* VIPTest */,
 				CA6C6B801F9BC23B0025933B /* Products */,
+				FD36A04F426E81DF90214557 /* Pods */,
+				A655B45531248B9C6D9652CA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +179,7 @@
 				CA662B911F9BEC810047BA2B /* Workers */,
 				CA662B921F9BEC9C0047BA2B /* Scenes */,
 				CA6C6B821F9BC23B0025933B /* AppDelegate.swift */,
+				CA5F0E0D1F9D44EC00B3A736 /* GIPHYCollectionViewCell.swift */,
 				CA6C6B841F9BC23B0025933B /* ViewController.swift */,
 				CA6C6B861F9BC23B0025933B /* Main.storyboard */,
 				CA6C6B8C1F9BC23C0025933B /* Assets.xcassets */,
@@ -151,6 +190,15 @@
 			path = VIPTest;
 			sourceTree = "<group>";
 		};
+		FD36A04F426E81DF90214557 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EABD5876B8DDE137F70E688D /* Pods-VIPTest.debug.xcconfig */,
+				5BAA1EB021BDBC99D1EF7691 /* Pods-VIPTest.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,9 +206,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CA6C6B941F9BC23C0025933B /* Build configuration list for PBXNativeTarget "VIPTest" */;
 			buildPhases = (
+				6B04FFD803A7A95339413BB7 /* [CP] Check Pods Manifest.lock */,
 				CA6C6B7B1F9BC23B0025933B /* Sources */,
 				CA6C6B7C1F9BC23B0025933B /* Frameworks */,
 				CA6C6B7D1F9BC23B0025933B /* Resources */,
+				56F5A079A60A1274E08659E9 /* [CP] Embed Pods Frameworks */,
+				6676A5A97C9148EC56B2B8D8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -218,24 +269,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		56F5A079A60A1274E08659E9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIPTest/Pods-VIPTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6676A5A97C9148EC56B2B8D8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VIPTest/Pods-VIPTest-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6B04FFD803A7A95339413BB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CA6C6B7B1F9BC23B0025933B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				CA662BA51F9BEEE90047BA2B /* ListGIPHYsInteractor.swift in Sources */,
+				CA5F0E0E1F9D44EC00B3A736 /* GIPHYCollectionViewCell.swift in Sources */,
 				CA6C6B851F9BC23B0025933B /* ViewController.swift in Sources */,
+				CA5FF0AD1F9D06FF00013D24 /* GiphiesCoreDataStore.swift in Sources */,
 				CA662B971F9BED740047BA2B /* ShowGIPHYInteractor.swift in Sources */,
+				CA5FF0AB1F9CFE7600013D24 /* GiphiesMemStore.swift in Sources */,
 				CA662BAF1F9BEF390047BA2B /* ListGIPHYsWorker.swift in Sources */,
 				CA662BB11F9BEF4C0047BA2B /* ListGIPHYsRouter.swift in Sources */,
 				CA662BAC1F9BEF1E0047BA2B /* ListGIPHYsViewController.swift in Sources */,
 				CA662BA71F9BEF020047BA2B /* ListGIPHYsModels.swift in Sources */,
+				CA5FF09F1F9CDCB600013D24 /* GIPHYWorker.swift in Sources */,
 				CA662BA91F9BEF0D0047BA2B /* ListGIPHYsPresenter.swift in Sources */,
 				CA662B9D1F9BEE0D0047BA2B /* ShowGIPHYViewController.swift in Sources */,
+				CA5FF0AF1F9D0A4700013D24 /* ManagedGIPHY+CoreDataProperties.swift in Sources */,
 				CA6C6B831F9BC23B0025933B /* AppDelegate.swift in Sources */,
+				CA5FF0A51F9CF6F600013D24 /* GIPHY.swift in Sources */,
 				CA662BA21F9BEEA40047BA2B /* ShowGIPHYRouter.swift in Sources */,
+				CA5F0E0C1F9D188F00B3A736 /* GIPHYAPIWorker.swift in Sources */,
 				CA662BA01F9BEE370047BA2B /* ShowGIPHYWorker.swift in Sources */,
 				CA662B9B1F9BEDC40047BA2B /* ShowGIPHYPresenter.swift in Sources */,
+				CA5FF0A71F9CF70900013D24 /* ManagedGIPHY.swift in Sources */,
 				CA6C6B8B1F9BC23B0025933B /* VIPTest.xcdatamodeld in Sources */,
 				CA662B991F9BEDB10047BA2B /* ShowGIPHYModels.swift in Sources */,
 			);
@@ -372,6 +479,7 @@
 		};
 		CA6C6B951F9BC23C0025933B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EABD5876B8DDE137F70E688D /* Pods-VIPTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -387,6 +495,7 @@
 		};
 		CA6C6B961F9BC23C0025933B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BAA1EB021BDBC99D1EF7691 /* Pods-VIPTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

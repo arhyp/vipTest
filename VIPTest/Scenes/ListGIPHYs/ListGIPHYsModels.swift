@@ -20,17 +20,20 @@ enum ListGIPHYs
   {
     struct Request
     {
+        var searchString: String?
     }
     struct Response
     {
+        var giphies:[GIPHY]?
     }
     struct ViewModel
     {
         struct DisplayedGIPHY {
-            var url: NSString?
-            var data: NSDate?
-            var title: NSString?
+            var url: String?
+            var title: String?
         }
+        
+        var displayesGiphies:[DisplayedGIPHY]?
     }
   }
 }

@@ -73,6 +73,30 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
             self.view.addSubview(self.searchBar!)
         }
     }
+    // MARK: refreshControll
+    func setupRefreshControll()
+    {
+        if (self.refreshControl == nil) {
+            self.refreshControl = UIRefreshControl()
+            self.refreshControl!.tintColor = UIColor.gray
+            self.refreshControl!.addTarget(self, action: #selector(ListGIPHYsViewController.updateData), for: UIControlEvents.valueChanged)
+        }
+        if (self.refreshControl?.isDescendant(of: self.collectionView!) == false){
+            self.collectionView?.addSubview(self.refreshControl!)
+        }
+
+    }
+    func startRefreshControl(){
+        if (!(self.refreshControl?.isRefreshing)!) {
+            self.refreshControl?.beginRefreshing()
+        }
+    }
+    func stopRefreshControl(){
+        if (self.refreshControl!.isRefreshing) {
+            self.refreshControl?.endRefreshing()
+        }
+    }
+    
   // MARK: Routing
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -90,40 +114,51 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
+    
   }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchGIPHY()
+    }
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated)
         setupSearchBar()
-        
+        setupRefreshControll()
     }
   
   // MARK: Do something
   
   //@IBOutlet weak var nameTextField: UITextField!
   
-  func doSomething()
+  func fetchGIPHY()
   {
     let request = ListGIPHYs.FetchList.Request()
-    interactor?.doSomething(request: request)
+    interactor?.fetchGIPHY(request: request)
   }
   
   func displaySomething(viewModel: ListGIPHYs.FetchList.ViewModel)
   {
     //nameTextField.text = viewModel.name
+    
+    self.listGIPHIES = viewModel.displayesGiphies ?? []
+    print ("list count \(self.listGIPHIES.count)")
+    self.collectionView?.reloadData()
+    stopRefreshControl()
   }
    
     
     
     // MARK: - Collection view data source
-    
+    override func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1;
+    }
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.listGIPHIES.count;
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "", for: indexPath);
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "qwerty", for: indexPath);
         
         
         return cell;
@@ -154,10 +189,16 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
     }
     func canceledSearch(){
         self.searchBarActive = false;
+        self.searchBar?.text = nil
     }
     func makeSearch(){
-        self.searchBarActive = true;
+        updateData()
     }
-
+    @objc func updateData(){
+        var request = ListGIPHYs.FetchList.Request()
+        request.searchString = self.searchBar?.text
+        interactor?.fetchGIPHY(request: request)
+        self.startRefreshControl()
+    }
 
 }

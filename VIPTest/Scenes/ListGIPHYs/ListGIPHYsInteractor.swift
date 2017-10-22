@@ -14,7 +14,7 @@ import UIKit
 
 protocol ListGIPHYsBusinessLogic
 {
-  func doSomething(request: ListGIPHYs.FetchList.Request)
+  func fetchGIPHY(request: ListGIPHYs.FetchList.Request)
 }
 
 protocol ListGIPHYsDataStore
@@ -25,17 +25,51 @@ protocol ListGIPHYsDataStore
 class ListGIPHYsInteractor: ListGIPHYsBusinessLogic, ListGIPHYsDataStore
 {
   var presenter: ListGIPHYsPresentationLogic?
-  var worker: ListGIPHYsWorker?
-  //var name: String = ""
+    var worker: GIPHYWorker = GIPHYWorker(giphyStore: GiphiesMemStore())
+    var giphyAPI = GIPHYAPI()
+    
+    var GIPHIES: [GIPHY]?
+  
   
   // MARK: Do something
   
-  func doSomething(request: ListGIPHYs.FetchList.Request)
+  func fetchGIPHY(request: ListGIPHYs.FetchList.Request)
   {
-    worker = ListGIPHYsWorker()
-    worker?.doSomeWork()
+    if (request.searchString?.isEmpty == false){
+    giphyAPI.fetchGIPIESWITH(strSearch: request.searchString!) { (result) in
+        do{
+            self.GIPHIES = try result()
+        }catch{
+            self.GIPHIES = [GIPHY]()
+        }
+        self.addToDB()
+        self.sendResponse()
+        }
+        
+    }else {
+        self.worker.fetchGIPHIES(completionHandler: { (giphies) in
+            self.GIPHIES = giphies
+            self.sendResponse()
+        })
+    }
     
-    let response = ListGIPHYs.FetchList.Response()
-    presenter?.presentSomething(response: response)
   }
+   
+    func sendResponse (){
+        var response = ListGIPHYs.FetchList.Response()
+        response.giphies = self.GIPHIES
+        print ("response count \(self.GIPHIES?.count)")
+        presenter?.presentSomething(response: response)
+    }
+    
+    func addToDB(){
+        if self.GIPHIES == nil {
+           return
+        }
+        for giphy in self.GIPHIES! {
+            worker.createGIPHY(giphyToCreate: giphy, completionHandler: {(giphy) in
+            print ("saved")
+            })
+        }
+    }
 }
