@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA662B971F9BED740047BA2B /* ShowGIPHYInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662B961F9BED740047BA2B /* ShowGIPHYInteractor.swift */; };
+		CA662B991F9BEDB10047BA2B /* ShowGIPHYModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662B981F9BEDB10047BA2B /* ShowGIPHYModels.swift */; };
+		CA662B9B1F9BEDC40047BA2B /* ShowGIPHYPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662B9A1F9BEDC40047BA2B /* ShowGIPHYPresenter.swift */; };
+		CA662B9D1F9BEE0D0047BA2B /* ShowGIPHYViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662B9C1F9BEE0D0047BA2B /* ShowGIPHYViewController.swift */; };
+		CA662BA01F9BEE370047BA2B /* ShowGIPHYWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662B9F1F9BEE370047BA2B /* ShowGIPHYWorker.swift */; };
+		CA662BA21F9BEEA40047BA2B /* ShowGIPHYRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662BA11F9BEEA40047BA2B /* ShowGIPHYRouter.swift */; };
+		CA662BA51F9BEEE90047BA2B /* ListGIPHYsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662BA41F9BEEE90047BA2B /* ListGIPHYsInteractor.swift */; };
+		CA662BA71F9BEF020047BA2B /* ListGIPHYsModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662BA61F9BEF020047BA2B /* ListGIPHYsModels.swift */; };
+		CA662BA91F9BEF0D0047BA2B /* ListGIPHYsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662BA81F9BEF0D0047BA2B /* ListGIPHYsPresenter.swift */; };
+		CA662BAC1F9BEF1E0047BA2B /* ListGIPHYsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662BAB1F9BEF1E0047BA2B /* ListGIPHYsViewController.swift */; };
+		CA662BAF1F9BEF390047BA2B /* ListGIPHYsWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662BAE1F9BEF390047BA2B /* ListGIPHYsWorker.swift */; };
+		CA662BB11F9BEF4C0047BA2B /* ListGIPHYsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA662BB01F9BEF4C0047BA2B /* ListGIPHYsRouter.swift */; };
 		CA6C6B831F9BC23B0025933B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C6B821F9BC23B0025933B /* AppDelegate.swift */; };
 		CA6C6B851F9BC23B0025933B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA6C6B841F9BC23B0025933B /* ViewController.swift */; };
 		CA6C6B881F9BC23B0025933B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA6C6B861F9BC23B0025933B /* Main.storyboard */; };
@@ -16,6 +28,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA662B961F9BED740047BA2B /* ShowGIPHYInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGIPHYInteractor.swift; sourceTree = "<group>"; };
+		CA662B981F9BEDB10047BA2B /* ShowGIPHYModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGIPHYModels.swift; sourceTree = "<group>"; };
+		CA662B9A1F9BEDC40047BA2B /* ShowGIPHYPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGIPHYPresenter.swift; sourceTree = "<group>"; };
+		CA662B9C1F9BEE0D0047BA2B /* ShowGIPHYViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGIPHYViewController.swift; sourceTree = "<group>"; };
+		CA662B9F1F9BEE370047BA2B /* ShowGIPHYWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGIPHYWorker.swift; sourceTree = "<group>"; };
+		CA662BA11F9BEEA40047BA2B /* ShowGIPHYRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowGIPHYRouter.swift; sourceTree = "<group>"; };
+		CA662BA41F9BEEE90047BA2B /* ListGIPHYsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGIPHYsInteractor.swift; sourceTree = "<group>"; };
+		CA662BA61F9BEF020047BA2B /* ListGIPHYsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGIPHYsModels.swift; sourceTree = "<group>"; };
+		CA662BA81F9BEF0D0047BA2B /* ListGIPHYsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGIPHYsPresenter.swift; sourceTree = "<group>"; };
+		CA662BAB1F9BEF1E0047BA2B /* ListGIPHYsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGIPHYsViewController.swift; sourceTree = "<group>"; };
+		CA662BAE1F9BEF390047BA2B /* ListGIPHYsWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGIPHYsWorker.swift; sourceTree = "<group>"; };
+		CA662BB01F9BEF4C0047BA2B /* ListGIPHYsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGIPHYsRouter.swift; sourceTree = "<group>"; };
 		CA6C6B7F1F9BC23B0025933B /* VIPTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VIPTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA6C6B821F9BC23B0025933B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CA6C6B841F9BC23B0025933B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +61,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA662B8F1F9BEC660047BA2B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CA662B901F9BEC750047BA2B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CA662B911F9BEC810047BA2B /* Workers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Workers;
+			sourceTree = "<group>";
+		};
+		CA662B921F9BEC9C0047BA2B /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				CA662BA31F9BEEBF0047BA2B /* ListGIPHYs */,
+				CA662B951F9BED090047BA2B /* ShowGIPHY */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		CA662B951F9BED090047BA2B /* ShowGIPHY */ = {
+			isa = PBXGroup;
+			children = (
+				CA662B961F9BED740047BA2B /* ShowGIPHYInteractor.swift */,
+				CA662B981F9BEDB10047BA2B /* ShowGIPHYModels.swift */,
+				CA662B9A1F9BEDC40047BA2B /* ShowGIPHYPresenter.swift */,
+				CA662B9C1F9BEE0D0047BA2B /* ShowGIPHYViewController.swift */,
+				CA662B9F1F9BEE370047BA2B /* ShowGIPHYWorker.swift */,
+				CA662BA11F9BEEA40047BA2B /* ShowGIPHYRouter.swift */,
+			);
+			path = ShowGIPHY;
+			sourceTree = "<group>";
+		};
+		CA662BA31F9BEEBF0047BA2B /* ListGIPHYs */ = {
+			isa = PBXGroup;
+			children = (
+				CA662BA41F9BEEE90047BA2B /* ListGIPHYsInteractor.swift */,
+				CA662BA61F9BEF020047BA2B /* ListGIPHYsModels.swift */,
+				CA662BA81F9BEF0D0047BA2B /* ListGIPHYsPresenter.swift */,
+				CA662BAB1F9BEF1E0047BA2B /* ListGIPHYsViewController.swift */,
+				CA662BAE1F9BEF390047BA2B /* ListGIPHYsWorker.swift */,
+				CA662BB01F9BEF4C0047BA2B /* ListGIPHYsRouter.swift */,
+			);
+			path = ListGIPHYs;
+			sourceTree = "<group>";
+		};
 		CA6C6B761F9BC23B0025933B = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +136,10 @@
 		CA6C6B811F9BC23B0025933B /* VIPTest */ = {
 			isa = PBXGroup;
 			children = (
+				CA662B8F1F9BEC660047BA2B /* Models */,
+				CA662B901F9BEC750047BA2B /* Services */,
+				CA662B911F9BEC810047BA2B /* Workers */,
+				CA662B921F9BEC9C0047BA2B /* Scenes */,
 				CA6C6B821F9BC23B0025933B /* AppDelegate.swift */,
 				CA6C6B841F9BC23B0025933B /* ViewController.swift */,
 				CA6C6B861F9BC23B0025933B /* Main.storyboard */,
@@ -139,9 +223,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA662BA51F9BEEE90047BA2B /* ListGIPHYsInteractor.swift in Sources */,
 				CA6C6B851F9BC23B0025933B /* ViewController.swift in Sources */,
+				CA662B971F9BED740047BA2B /* ShowGIPHYInteractor.swift in Sources */,
+				CA662BAF1F9BEF390047BA2B /* ListGIPHYsWorker.swift in Sources */,
+				CA662BB11F9BEF4C0047BA2B /* ListGIPHYsRouter.swift in Sources */,
+				CA662BAC1F9BEF1E0047BA2B /* ListGIPHYsViewController.swift in Sources */,
+				CA662BA71F9BEF020047BA2B /* ListGIPHYsModels.swift in Sources */,
+				CA662BA91F9BEF0D0047BA2B /* ListGIPHYsPresenter.swift in Sources */,
+				CA662B9D1F9BEE0D0047BA2B /* ShowGIPHYViewController.swift in Sources */,
 				CA6C6B831F9BC23B0025933B /* AppDelegate.swift in Sources */,
+				CA662BA21F9BEEA40047BA2B /* ShowGIPHYRouter.swift in Sources */,
+				CA662BA01F9BEE370047BA2B /* ShowGIPHYWorker.swift in Sources */,
+				CA662B9B1F9BEDC40047BA2B /* ShowGIPHYPresenter.swift in Sources */,
 				CA6C6B8B1F9BC23B0025933B /* VIPTest.xcdatamodeld in Sources */,
+				CA662B991F9BEDB10047BA2B /* ShowGIPHYModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
