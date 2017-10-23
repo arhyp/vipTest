@@ -101,7 +101,9 @@ class GiphiesMemStore: GIPHIESStoreProtocol, GIPHIESStoreUtilityProtocol
         if oldGiphy == nil {
             type(of: self).giphies.append(giphy)
         }
+        
         completionHandler { return giphy }
+        
     }
     
 

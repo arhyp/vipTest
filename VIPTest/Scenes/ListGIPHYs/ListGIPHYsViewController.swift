@@ -67,10 +67,12 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
             self.searchBar?.barTintColor         = UIColor.white
             self.searchBar?.delegate             = self
             self.searchBar?.placeholder          = "search here"
+            self.searchBar?.backgroundColor      = UIColor.white
         }
         
         if (self.searchBar?.isDescendant(of: self.view) == false) {
             self.view.addSubview(self.searchBar!)
+            self.collectionView?.contentInset = UIEdgeInsetsMake(searchBar?.frame.size.height ?? 0, 0, 0, 0);
         }
     }
     // MARK: refreshControll
@@ -114,12 +116,12 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    
+    fetchGIPHY()
   }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        fetchGIPHY()
+        
     }
     override func viewDidAppear(_ animated: Bool)
     {
@@ -158,8 +160,9 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
         return self.listGIPHIES.count;
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "qwerty", for: indexPath);
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "qwerty", for: indexPath) as! GIPHYCollectionViewCell;
         
+        cell.displayedGiphy = self.listGIPHIES[indexPath.row]
         
         return cell;
     }
@@ -190,6 +193,7 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
     func canceledSearch(){
         self.searchBarActive = false;
         self.searchBar?.text = nil
+        updateData()
     }
     func makeSearch(){
         updateData()

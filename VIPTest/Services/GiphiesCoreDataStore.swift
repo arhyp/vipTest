@@ -170,10 +170,10 @@ class GiphiesCoreDataStore: GIPHIESStoreProtocol, GIPHIESStoreUtilityProtocol
 
     func fetchGIPHIES(completionHandler: @escaping (() throws -> [GIPHY]) -> Void)
     {
-        privateManagedObjectContext.perform {
+        mainManagedObjectContext.perform {
             do {
                 let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ManagedGIPHY")
-                let results = try self.privateManagedObjectContext.fetch(fetchRequest) as! [ManagedGIPHY]
+                let results = try self.mainManagedObjectContext.fetch(fetchRequest) as! [ManagedGIPHY]
                 let giphies = results.map { $0.toGIPHY() }
                 completionHandler { return giphies }
             } catch {
@@ -202,14 +202,22 @@ class GiphiesCoreDataStore: GIPHIESStoreProtocol, GIPHIESStoreUtilityProtocol
 
     func createGIPHY(giphyToCreate: GIPHY, completionHandler: @escaping (() throws -> GIPHY?) -> Void)
     {
-        privateManagedObjectContext.perform {
+        mainManagedObjectContext.perform {
             do {
-                let managedGIPHY = NSEntityDescription.insertNewObject(forEntityName: "ManagedGIPHY", into: self.privateManagedObjectContext) as! ManagedGIPHY
-                var giphy = giphyToCreate
-                self.generateGIPHYID(giphy: &giphy)
-                
+                let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ManagedGIPHY")
+                fetchRequest.predicate = NSPredicate(format: "id == %@", giphyToCreate.id!)
+                let results = try self.privateManagedObjectContext.fetch(fetchRequest) as! [ManagedGIPHY]
+                if results.first != nil {
+                    completionHandler { throw GIPHIESStoreError.CannotCreate("Cannot create giphy with id \(String(describing: giphyToCreate.id))")
+                        
+                    }
+                    return;
+                }
+                let managedGIPHY = NSEntityDescription.insertNewObject(forEntityName: "ManagedGIPHY", into: self.mainManagedObjectContext) as! ManagedGIPHY
+                let giphy = giphyToCreate
+
                 managedGIPHY.fromGIPHY(giphy: giphy)
-                try self.privateManagedObjectContext.save()
+                try self.mainManagedObjectContext.save()
                 completionHandler { return giphy }
             } catch {
                 completionHandler { throw GIPHIESStoreError.CannotCreate("Cannot create giphy with id \(String(describing: giphyToCreate.id))") }
@@ -217,5 +225,7 @@ class GiphiesCoreDataStore: GIPHIESStoreProtocol, GIPHIESStoreUtilityProtocol
         }
     }
 
-
+    func save(){
+       try? self.mainManagedObjectContext.save()
+    }
 }

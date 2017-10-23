@@ -179,7 +179,7 @@
 				CA662B911F9BEC810047BA2B /* Workers */,
 				CA662B921F9BEC9C0047BA2B /* Scenes */,
 				CA6C6B821F9BC23B0025933B /* AppDelegate.swift */,
-				CA5F0E0D1F9D44EC00B3A736 /* GIPHYCollectionViewCell.swift */,
+				CA7BF5291F9D48E50030E313 /* Views */,
 				CA6C6B841F9BC23B0025933B /* ViewController.swift */,
 				CA6C6B861F9BC23B0025933B /* Main.storyboard */,
 				CA6C6B8C1F9BC23C0025933B /* Assets.xcassets */,
@@ -188,6 +188,14 @@
 				CA6C6B891F9BC23B0025933B /* VIPTest.xcdatamodeld */,
 			);
 			path = VIPTest;
+			sourceTree = "<group>";
+		};
+		CA7BF5291F9D48E50030E313 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CA5F0E0D1F9D44EC00B3A736 /* GIPHYCollectionViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		FD36A04F426E81DF90214557 /* Pods */ = {

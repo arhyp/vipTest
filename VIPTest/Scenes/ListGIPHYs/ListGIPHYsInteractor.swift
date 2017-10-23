@@ -25,7 +25,7 @@ protocol ListGIPHYsDataStore
 class ListGIPHYsInteractor: ListGIPHYsBusinessLogic, ListGIPHYsDataStore
 {
   var presenter: ListGIPHYsPresentationLogic?
-    var worker: GIPHYWorker = GIPHYWorker(giphyStore: GiphiesMemStore())
+    var worker: GIPHYWorker = GIPHYWorker(giphyStore: GiphiesCoreDataStore())
     var giphyAPI = GIPHYAPI()
     
     var GIPHIES: [GIPHY]?
@@ -58,7 +58,7 @@ class ListGIPHYsInteractor: ListGIPHYsBusinessLogic, ListGIPHYsDataStore
     func sendResponse (){
         var response = ListGIPHYs.FetchList.Response()
         response.giphies = self.GIPHIES
-        print ("response count \(self.GIPHIES?.count)")
+        print ("response count \(String(describing: self.GIPHIES?.count))")
         presenter?.presentSomething(response: response)
     }
     
@@ -68,7 +68,7 @@ class ListGIPHYsInteractor: ListGIPHYsBusinessLogic, ListGIPHYsDataStore
         }
         for giphy in self.GIPHIES! {
             worker.createGIPHY(giphyToCreate: giphy, completionHandler: {(giphy) in
-            print ("saved")
+            
             })
         }
     }

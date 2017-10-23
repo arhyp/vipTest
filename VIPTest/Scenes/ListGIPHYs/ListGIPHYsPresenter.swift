@@ -33,7 +33,7 @@ class ListGIPHYsPresenter: ListGIPHYsPresentationLogic
     func convertGIPHY(giphies: [GIPHY])->[ListGIPHYs.FetchList.ViewModel.DisplayedGIPHY]{
         var arrayOfGiphies = [ListGIPHYs.FetchList.ViewModel.DisplayedGIPHY]()
         for giphy in giphies{
-            var disGIPHY = ListGIPHYs.FetchList.ViewModel.DisplayedGIPHY(url: giphy.url, title: giphy.title)
+            let disGIPHY = ListGIPHYs.FetchList.ViewModel.DisplayedGIPHY(url: giphy.url, title: giphy.title)
             arrayOfGiphies.append(disGIPHY)
         }
         return arrayOfGiphies

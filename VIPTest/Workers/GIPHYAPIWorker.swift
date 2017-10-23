@@ -55,8 +55,9 @@ class GIPHYAPI: GIPHIESStoreProtocol, GIPHIESStoreUtilityProtocol
     
     func fetchGIPIESWITH(strSearch: String, completionHandler: @escaping (() throws -> [GIPHY]?) -> Void){
         let q = strSearch.replacingOccurrences(of: " ", with: "%20")
-        
-        let request = NSMutableURLRequest(url: NSURL(string: "http://api.giphy.com/v1/gifs/search?%20q=\(q)&api_key=INLDV4yDoGJwV89zKH4oE07KIjmGDIVB")! as URL,
+        let url = NSURL(string: "http://api.giphy.com/v1/gifs/search?%20q=\(q)&api_key=INLDV4yDoGJwV89zKH4oE07KIjmGDIVB") as? URL
+        if (url == nil) {return}
+        let request = NSMutableURLRequest(url: url!,
                                           cachePolicy: .useProtocolCachePolicy,
                                           timeoutInterval: 10.0)
         request.httpMethod = "GET"

@@ -40,10 +40,12 @@ class GIPHYWorker
         
         func createGIPHY(giphyToCreate: GIPHY, completionHandler: @escaping (GIPHY?) -> Void)
         {
+            
             giphyStore.createGIPHY(giphyToCreate: giphyToCreate) { (giphy: () throws -> GIPHY?) -> Void in
                 do {
                     let giphy = try giphy()
                     DispatchQueue.main.async {
+                        
                         completionHandler(giphy)
                     }
                 } catch {
@@ -53,7 +55,7 @@ class GIPHYWorker
                 }
             }
         }
-        
+    
     }
     
     // MARK: - Giphies store API
