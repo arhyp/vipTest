@@ -93,7 +93,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xVY-3M-Way" customClass="FLAnimatedImageView">
-                                            <rect key="frame" x="0.0" y="0.0" width="170" height="201"/>
+                                            <rect key="frame" x="4" y="4" width="162" height="193"/>
                                             <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="RAv-xe-gl0">
@@ -109,13 +109,13 @@
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="xVY-3M-Way" secondAttribute="bottom" id="1iz-O7-5ou"/>
-                                    <constraint firstItem="xVY-3M-Way" firstAttribute="leading" secondItem="EFX-Xi-WpP" secondAttribute="leading" id="3X4-Py-7zA"/>
+                                    <constraint firstAttribute="bottom" secondItem="xVY-3M-Way" secondAttribute="bottom" constant="4" id="1iz-O7-5ou"/>
+                                    <constraint firstItem="xVY-3M-Way" firstAttribute="leading" secondItem="EFX-Xi-WpP" secondAttribute="leading" constant="4" id="3X4-Py-7zA"/>
                                     <constraint firstAttribute="bottomMargin" secondItem="RAv-xe-gl0" secondAttribute="bottom" constant="-8" id="5Wl-LP-V8C"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="RAv-xe-gl0" secondAttribute="trailing" constant="-8" id="O2R-BT-cm1"/>
-                                    <constraint firstItem="xVY-3M-Way" firstAttribute="top" secondItem="EFX-Xi-WpP" secondAttribute="top" id="UMU-PU-9wa"/>
+                                    <constraint firstItem="xVY-3M-Way" firstAttribute="top" secondItem="EFX-Xi-WpP" secondAttribute="top" constant="4" id="UMU-PU-9wa"/>
                                     <constraint firstItem="RAv-xe-gl0" firstAttribute="leading" secondItem="EFX-Xi-WpP" secondAttribute="leadingMargin" constant="-8" id="hgu-6x-3Sc"/>
-                                    <constraint firstAttribute="trailing" secondItem="xVY-3M-Way" secondAttribute="trailing" id="sjy-20-f96"/>
+                                    <constraint firstAttribute="trailing" secondItem="xVY-3M-Way" secondAttribute="trailing" constant="4" id="sjy-20-f96"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="giphyImageView" destination="xVY-3M-Way" id="FAl-qn-ZfM"/>

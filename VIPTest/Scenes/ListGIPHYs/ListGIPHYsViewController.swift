@@ -99,6 +99,15 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
         }
     }
     
+    //MARK: collection view
+    func setupCollectionView(){
+        let screenWidth = UIScreen.main.bounds.size.width
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.itemSize = CGSize(width: screenWidth/2, height: screenWidth/2)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView!.collectionViewLayout = layout
+    }
   // MARK: Routing
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?)
@@ -128,6 +137,7 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
         super.viewDidAppear(animated)
         setupSearchBar()
         setupRefreshControll()
+        setupCollectionView()
     }
   
   // MARK: Do something
@@ -166,7 +176,7 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
         
         return cell;
     }
-
+    
     
     // MARK: search delegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
