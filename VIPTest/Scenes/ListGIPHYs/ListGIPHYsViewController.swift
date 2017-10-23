@@ -170,7 +170,7 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
         return self.listGIPHIES.count;
     }
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "qwerty", for: indexPath) as! GIPHYCollectionViewCell;
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: GIPHYCollectionViewCell.reuseIdentifier, for: indexPath) as! GIPHYCollectionViewCell;
         
         cell.displayedGiphy = self.listGIPHIES[indexPath.row]
         

@@ -41,4 +41,7 @@ class GIPHYCollectionViewCell: UICollectionViewCell {
         }
         
     }
+    class var reuseIdentifier:String { return "GIPHYCollectionViewCell" }
+        
+    
 }
