@@ -38,20 +38,37 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GYx-Id-cJw" customClass="FLAnimatedImageView">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8BZ-bq-2AO">
+                                <rect key="frame" x="16" y="64" width="343" height="65"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="DrY-Bs-epF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GYx-Id-cJw" firstAttribute="top" secondItem="myJ-Hv-SFL" secondAttribute="top" id="2wD-1x-MZe"/>
+                            <constraint firstItem="myJ-Hv-SFL" firstAttribute="trailing" secondItem="8BZ-bq-2AO" secondAttribute="trailing" constant="16" id="3KH-Rz-bpE"/>
+                            <constraint firstItem="8BZ-bq-2AO" firstAttribute="top" secondItem="myJ-Hv-SFL" secondAttribute="top" id="C6X-ed-MGG"/>
                             <constraint firstItem="myJ-Hv-SFL" firstAttribute="bottom" secondItem="GYx-Id-cJw" secondAttribute="bottom" id="sqB-pF-uMg"/>
                             <constraint firstItem="myJ-Hv-SFL" firstAttribute="trailing" secondItem="GYx-Id-cJw" secondAttribute="trailing" id="vsj-LR-gM4"/>
                             <constraint firstItem="GYx-Id-cJw" firstAttribute="leading" secondItem="myJ-Hv-SFL" secondAttribute="leading" id="xTV-7N-FMA"/>
+                            <constraint firstItem="8BZ-bq-2AO" firstAttribute="leading" secondItem="myJ-Hv-SFL" secondAttribute="leading" constant="16" id="xnG-6s-B4y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="myJ-Hv-SFL"/>
                     </view>
+                    <connections>
+                        <outlet property="giphyImageView" destination="GYx-Id-cJw" id="9i1-U5-yrE"/>
+                        <outlet property="giphyLabel" destination="8BZ-bq-2AO" id="0hY-1m-EhA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6L8-P8-9jd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="436" y="-638"/>
+            <point key="canvasLocation" x="436" y="-638.2308845577212"/>
         </scene>
         <!--GIPHY List-->
         <scene sceneID="XHP-e3-U7l">
@@ -103,7 +120,7 @@
                                 <connections>
                                     <outlet property="giphyImageView" destination="xVY-3M-Way" id="FAl-qn-ZfM"/>
                                     <outlet property="giphyLabel" destination="RAv-xe-gl0" id="dNv-VP-erp"/>
-                                    <segue destination="eYx-Ph-fAH" kind="show" identifier="SHOWGIPHY" id="eFm-XY-rJV"/>
+                                    <segue destination="eYx-Ph-fAH" kind="show" identifier="ShowGIPHY" id="eFm-XY-rJV"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>

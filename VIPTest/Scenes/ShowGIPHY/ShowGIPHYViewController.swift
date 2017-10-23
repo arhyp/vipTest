@@ -11,6 +11,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 protocol ShowGIPHYDisplayLogic: class
 {
@@ -22,7 +23,10 @@ class ShowGIPHYViewController: UIViewController, ShowGIPHYDisplayLogic
   var interactor: ShowGIPHYBusinessLogic?
   var router: (NSObjectProtocol & ShowGIPHYRoutingLogic & ShowGIPHYDataPassing)?
 
-  // MARK: Object lifecycle
+    @IBOutlet weak var giphyLabel: UILabel!
+    @IBOutlet weak var giphyImageView: FLAnimatedImageView!
+    
+    // MARK: Object lifecycle
   
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
   {
@@ -84,6 +88,9 @@ class ShowGIPHYViewController: UIViewController, ShowGIPHYDisplayLogic
   
   func displaySomething(viewModel: ShowGIPHY.Something.ViewModel)
   {
-    //nameTextField.text = viewModel.name
+    self.giphyLabel.text = viewModel.displayedGIPHY.title
+    self.giphyImageView.sd_setShowActivityIndicatorView(true)
+    giphyImageView.sd_setIndicatorStyle(.white)
+    self.giphyImageView.sd_setImage(with: NSURL(string: viewModel.displayedGIPHY.url)! as URL, placeholderImage: nil, options: [])
   }
 }

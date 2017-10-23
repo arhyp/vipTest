@@ -23,9 +23,15 @@ enum ShowGIPHY
     }
     struct Response
     {
+        var giphy:GIPHY
     }
     struct ViewModel
     {
+        struct DisplayedGIPHY {
+            var title:String
+            var url:String
+        }
+        var displayedGIPHY: DisplayedGIPHY
     }
   }
 }

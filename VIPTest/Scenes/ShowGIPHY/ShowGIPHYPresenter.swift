@@ -25,7 +25,8 @@ class ShowGIPHYPresenter: ShowGIPHYPresentationLogic
   
   func presentSomething(response: ShowGIPHY.Something.Response)
   {
-    let viewModel = ShowGIPHY.Something.ViewModel()
+    let displayedGIPHY = ShowGIPHY.Something.ViewModel.DisplayedGIPHY(title: response.giphy.title ?? "no data(", url: response.giphy.url ?? "")
+    let viewModel = ShowGIPHY.Something.ViewModel(displayedGIPHY: displayedGIPHY)
     viewController?.displaySomething(viewModel: viewModel)
   }
 }

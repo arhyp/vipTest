@@ -15,15 +15,17 @@ import UIKit
 protocol ListGIPHYsBusinessLogic
 {
   func fetchGIPHY(request: ListGIPHYs.FetchList.Request)
+
 }
 
 protocol ListGIPHYsDataStore
 {
-  //var name: String { get set }
+    var GIPHIES:[GIPHY]?{get}
+
 }
 
 class ListGIPHYsInteractor: ListGIPHYsBusinessLogic, ListGIPHYsDataStore
-{
+{    
   var presenter: ListGIPHYsPresentationLogic?
     var worker: GIPHYWorker = GIPHYWorker(giphyStore: GiphiesCoreDataStore())
     var giphyAPI = GIPHYAPI()
@@ -62,7 +64,7 @@ class ListGIPHYsInteractor: ListGIPHYsBusinessLogic, ListGIPHYsDataStore
         presenter?.presentSomething(response: response)
     }
     
-    func addToDB(){
+    private func addToDB(){
         if self.GIPHIES == nil {
            return
         }
@@ -72,4 +74,7 @@ class ListGIPHYsInteractor: ListGIPHYsBusinessLogic, ListGIPHYsDataStore
             })
         }
     }
+    
+
+    
 }

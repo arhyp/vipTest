@@ -19,11 +19,13 @@ protocol ShowGIPHYBusinessLogic
 
 protocol ShowGIPHYDataStore
 {
-  //var name: String { get set }
+    var giphy: GIPHY? { get set }
 }
 
 class ShowGIPHYInteractor: ShowGIPHYBusinessLogic, ShowGIPHYDataStore
 {
+    var giphy: GIPHY?
+    
   var presenter: ShowGIPHYPresentationLogic?
   var worker: ShowGIPHYWorker?
   //var name: String = ""
@@ -35,7 +37,9 @@ class ShowGIPHYInteractor: ShowGIPHYBusinessLogic, ShowGIPHYDataStore
     worker = ShowGIPHYWorker()
     worker?.doSomeWork()
     
-    let response = ShowGIPHY.Something.Response()
-    presenter?.presentSomething(response: response)
+    if (self.giphy != nil){
+        let response = ShowGIPHY.Something.Response(giphy: self.giphy!)
+        presenter?.presentSomething(response: response)
+    }
   }
 }

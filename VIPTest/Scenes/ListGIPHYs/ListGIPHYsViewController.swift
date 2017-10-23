@@ -166,6 +166,7 @@ class ListGIPHYsViewController: UICollectionViewController, ListGIPHYsDisplayLog
         
         return cell;
     }
+
     
     // MARK: search delegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
